@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<h1>JavaScript string</h1>
+<p>This is my string html page.</p>
+
+<p id="demo"></p>
+
+<label for="programming">Enter name:</label>
+<input type="Ariel" id="KayD" placeholder="DeAndrea Hollins">
+
+<script>
+var str1 = "HI THERE!";
+var str2 = "My name is DeAndrea Hollins";
+
+document.getElementById("demo").innerText = str1 + " " + str2;
+
+document.getElementById('showBtn').addEventListener('click', function() {
+	var name = document.getElementById('nameInput').value;
+		document.getElementById('demo').innerText = str1 + " " + str2;
+	} else {
+		document.getElementById('demo').innerText = str1 + " " + name;
+	}
+document.getElementById('nameInput').addEventListener('keydown', function(e) {
+	if (e.key === 'Enter') {
+		document.getElementById('showBtn').click();
+	}
+</script>
+
+</body>
+</html>
