@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en"
+<head
+    <meta charset="UTF-8">
+    <title>kidsnextdoor</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        img {
+            border: 3px solid black;
+            margin: 15px;
+        }
+        #imageContainer {
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Kids Next Door</h1>
+    <div id="imageContainer">
+        <img src="knd1.jpg" alt="Kids Next Door Image 1" width="300" height="200">
+        <img src="knd2.jpg" alt="Kids Next Door Image 2" width="300" height="200">
+    </div>
+    <button onclick="alert('Mission Accomplished!')">Complete Mission</button>
+    <script>
+        let container = document.getElementById('imageContainer');
+        container.addEventListener('click', function() {
+            alert('You clicked on the image container!');
+        
+        let images = container.getElementsByTagName('img');
+        img1.src= "image1.jpg"
+        img1.width= "300"
+        img1.height= "300"
+        container.appendChild(img1);
+
+        let img2 = document.createElement('img');
+        img2.src= "image2.jpg"
+        img2.width= "300"   
+        img2.height= "300"
+        container.appendChild(img2);
+    } 
+     </script>
+</body>
+</html>     
