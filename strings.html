@@ -1,0 +1,141 @@
+<!--
+    Author: Deandrea KayD Hollins
+    string.html
+    Description: Palindrone checker with looks, prompts, and simple styling
+-->
+
+<!--This is the HTML structure for the palindrone checker webpage-->
+<!DOCTYPE html>
+<html lang="en">
+
+<!--Head section containing meta information and title-->
+<head>
+    <!--Set the character encoding so special characters are working correctly -->
+    <meta charset="UTF-8">
+    <!--Make the page responsive on phones amd tablets-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Set the title that appears on the browser tab-->
+    <title>Palindrone Checker</title>
+    
+    <!--Import a Google Font to make text look nice-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!--Internal CSS styling for the webpage-->
+    <style>
+        /*Style the whole page background and font*/
+        body {
+            /*Use the imported Google Font for all text*/
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            /*Set a soft grandient background color*/
+            background: linear-gradient(to right, #ffecd2, #fcb69f);    
+            /*Center content <horizontally></horizontally>
+            display: flex;
+            /*Center content vertically*/
+            justify-content: center;
+            align-items: center;
+            /*Make the content fill the whole hieght of the viewport*/
+            height: 100vh;
+            /*Remove default margin*/
+            margin: 0;
+        }
+        /*Style the main container that holds all visible content*/
+        .container {
+           /*Set a maximum width for better readability*/
+            max-width: 600px;
+            /*Center the container on the page*/
+            margin: 0 auto;
+            /*Add padding inside the container*/
+            padding: 20px;
+            /*Give the container a white background*/
+            background-color: #ffffff;
+            border-radius: 15px;
+            /*Add a slight shadow around the container*/
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /*Center the text inside the container*/
+            text-align: center;
+        }
+        /*Style the main heading*/
+        h1 {
+            /*Set a dark text <color></color>*/
+             color: #007acc;
+             /*Add some space below the heading*/
+                margin-bottom: 20px;
+        }
+        /*Style the button that starts the palindrone check*/
+        button {
+            /*Set a blue background color*/
+            background-color: #007acc;
+            /*Set white text color*/
+            color: white;
+            /*Remove default border*/
+            border: none;
+            /*Add padding for better click area*/
+            padding: 10px 20px;
+            /*Set a larger font size*/
+            font-size: 16px;
+            /*Change cursor to pointer on hover*/
+            cursor: pointer;
+            /*Add a subtle shadow below the button*/
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            /*Slightly increase fontsize on hover*/
+            font-size: lrem;
+        }
+
+        /*Add hover effect to the button*/
+        button:hover {
+            /*Lightly Darken the button when it hovers*/
+            background-color: #005f99;
+        }
+        /*Style the small note that shows the result*/
+        .note{
+            /*Set a medium text size*/
+            font-size: 18px;
+            /*Add some space above the note*/
+            margin-top: 20px;
+            /*Make the text bold*/
+            font-weight: bold;
+            <!-- Title will show in the browser-->
+            <title>KayDs Palindrone Checker</title>
+        }
+        </style>
+        <!--End of the CSS Style -->
+</head>
+<!--Start the body where the visible content is-->
+<body>
+    <!--Main container for all content-->
+    <div class="container">
+        <!--Main heading of the page-->
+        <h1>Palindrone Checker</h1>
+        <!--Input field for user to enter a string-->
+        <input type="text" id="userInput" placeholder="Enter a string to check">
+        <!--Button to trigger the palindrone check-->
+        <button onclick="checkPalindrome()">Check Palindrone</button>
+        <!--Div to display the result of the check-->
+        <div id="result" class="note"></div>
+    </div>
+
+    <!--JavaScript function to check if the input string is a palindrone-->
+    <script>
+        function checkPalindrome() {
+            //split the input string into characters, reverse the array, and join it back into a string
+            let cleanedInput = userInput.replace(/[\W_]/g, '').toLowerCase();
+            let reversedInput = cleanedInput.split('').reverse().join('');
+            //Compare the cleaned input with the reversed input
+            if (cleanedInput === reversedInput && cleanedInput.length > 0) {    
+                //If they are the same, it's a palindrone
+                document.getElementById('result').innerText = `"${userInput.value}" is a palindrone!`;
+            } else {
+                //If they are different, it's not a palindrone
+                document.getElementById('result').innerText = `"${userInput.value}" is not a palindrone.`;
+            } else if (cleaned === cleaned.split('').reverse().join("")){}  
+            } else {
+                alert("this is a palindrone (by the reverse check)!"checkPalindrome)
+                .getElementById('result').innerText = `Please enter a valid string.`;
+            }
+    </script>
+    <!--End of the body content-->  
+</body>
+<!--End of the HTML document--
+
+</html>
+<!--End of the HTML document -->
